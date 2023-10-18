@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weight to USD Converter</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('background.jpg');
+            background-size: cover;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            background-color: yellow;
+            background-size: cover;
+            color: black;
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+
+        #homeButton {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-image: url('home.png'); /* Change 'home.png' to your home button image */
+            background-size: cover;
+            width: 40px; /* Adjust the width and height as needed */
+            height: 40px;
+            text-indent: -9999px; /* Hide the text label */
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="homeButton">Home</a>
+    <div id="container">
+        <button id="convertButton">Convert</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        // JavaScript to handle the button click and conversion
+        document.getElementById("convertButton").addEventListener("click", function() {
+            const weightInGrams = parseFloat(prompt("Enter weight in grams:"));
+            if (!isNaN(weightInGrams)) {
+                const usd = (weightInGrams * 45) / 2;
+                document.getElementById("result").innerText = `USD: $${usd.toFixed(2)}`;
+            } else {
+                alert("Invalid input. Please enter a valid weight in grams.");
+            }
+        });
+
+        // Home button link
+        document.getElementById("homeButton").addEventListener("click", function() {
+            // Add your home page URL here
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>
