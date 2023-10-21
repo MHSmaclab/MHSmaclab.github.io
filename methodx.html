@@ -38,7 +38,7 @@
             <!-- Masthead -->
             <header class="masthead">
                 <div class="container">
-                    <div class="masthead-heading text-uppercase">Replicator</div>
+                    <div class="masthead-heading text-uppercase">MethodX</div>
                     <a class="btn btn-primary btn-xl text-uppercase" href="#Classes" onclick="calculateResult()">calculate</a>
                 </div>
             </header>
@@ -47,29 +47,13 @@
     
             <div class="container">
                 <div class="text-center">
-                    <a href="methodx.html" class="button button2">MethodX</a>
-                    <a href="formlabs.html" class="button button3">FormLabs</a>
+                    <a href="replicator.html" class="button button1">Replicator+</a>
+                    <a href="formlabs.html" class="button button3">Formlabs</a>
                 </div>
             </div>
+
             
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
-            <script>
-                function calculateResult() {
-                    const inputValue = parseFloat(prompt("Enter the weight in lbs:"));
-    
-                    if (!isNaN(inputValue) && inputValue > 0) {
-                        const x = (45 * inputValue) / 2;
-                        const resultElement = document.getElementById("result");
-                        resultElement.textContent = `$${x.toFixed(2)}`;
-                    } else {
-                        const resultElement = document.getElementById("result");
-                        resultElement.textContent = "Please enter a valid weight";
-                    }
-                }
-            </script>
-            
     </body>
 </html>
-
-
